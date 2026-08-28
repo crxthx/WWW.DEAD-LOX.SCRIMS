@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DEAD-LOX SCRIMS | Free Fire Esports</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #080808;
+    color: white;
+}
+
+header {
+    background: #111;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #333;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff3c00;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #ff3c00;
+}
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    background:
+        linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.85)),
+        radial-gradient(circle at center, #552000, #080808 65%);
+}
+
+.hero h1 {
+    font-size: clamp(42px, 8vw, 80px);
+    color: #ff4500;
+    text-shadow: 0 0 25px #ff4500;
+}
+
+.hero h2 {
+    font-size: 25px;
+    margin: 15px 0;
+}
+
+.hero p {
+    color: #ccc;
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.7;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 28px;
+    background: #ff3c00;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #ff6500;
+    transform: scale(1.03);
+}
+
+section {
+    padding: 70px 7%;
+}
+
+.title {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 40px;
+    color: #ff4500;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #151515;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #292929;
+    text-align: center;
+}
+
+.card h3 {
+    color: #ff6500;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #bbb;
+    line-height: 1.6;
+}
+
+.price {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 15px 0;
+    color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #151515;
+}
+
+th, td {
+    padding: 15px;
+    border-bottom: 1px solid #333;
+    text-align: center;
+}
+
+th {
+    color: #ff4500;
+}
+
+.rules {
+    max-width: 800px;
+    margin: auto;
+}
+
+.rules li {
+    margin: 14px 0;
+    color: #ccc;
+}
+
+footer {
+    background: #111;
+    text-align: center;
+    padding: 30px;
+    color: #888;
+}
+
+@media(max-width:700px) {
+    nav {
+        display: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">DEAD-LOX SCRIMS</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#scrims">Scrims</a>
+        <a href="#leaderboard">Leaderboard</a>
+        <a href="#rules">Rules</a>
+    </nav>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+    <div>
+        <h1>DEAD-LOX</h1>
+        <h2>FREE FIRE SCRIMS</h2>
+
+        <p>
+            Compete with the best squads, participate in organised
+            Free Fire scrims and tournaments, climb the leaderboard
+            and prove your skills.
+        </p>
+
+        <a href="#scrims" class="btn">JOIN A SCRIM</a>
+    </div>
+</section>
+
+
+<!-- SCRIMS -->
+
+<section id="scrims">
+
+    <h2 class="title">UPCOMING SCRIMS</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>DAILY SCRIM</h3>
+            <p>Squad Match</p>
+            <div class="price">₹30</div>
+            <p>Prize Pool: ₹500+</p>
+
+            <a href="#" class="btn"
+               onclick="joinScrim('Daily Scrim')">
+               JOIN NOW
+            </a>
+        </div>
+
+
+        <div class="card">
+            <h3>WEEKLY CUP</h3>
+            <p>Squad Tournament</p>
+            <div class="price">₹100</div>
+            <p>Prize Pool: ₹2,000+</p>
+
+            <a href="#" class="btn"
+               onclick="joinScrim('Weekly Cup')">
+               JOIN NOW
+            </a>
+        </div>
+
+
+        <div class="card">
+            <h3>CHAMPIONSHIP</h3>
+            <p>Special Tournament</p>
+            <div class="price">₹200</div>
+            <p>Prize Pool: ₹5,000+</p>
+
+            <a href="#" class="btn"
+               onclick="joinScrim('Championship')">
+               JOIN NOW
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- LEADERBOARD -->
+
+<section id="leaderboard">
+
+    <h2 class="title">LEADERBOARD</h2>
+
+    <table>
+
+        <tr>
+            <th>Rank</th>
+            <th>Team</th>
+            <th>Matches</th>
+            <th>Points</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>Team Alpha</td>
+            <td>10</td>
+            <td>85</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>DeadShot</td>
+            <td>10</td>
+            <td>78</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Shadow X</td>
+            <td>10</td>
+            <td>72</td>
+        </tr>
+
+    </table>
+
+</section>
+
+
+<!-- RULES -->
+
+<section id="rules">
+
+    <h2 class="title">TOURNAMENT RULES</h2>
+
+    <div class="rules">
+
+        <ul>
+            <li>Players must follow the tournament rules.</li>
+            <li>Teams must register before the registration deadline.</li>
+            <li>Players must use their registered in-game details.</li>
+            <li>Unsportsmanlike behaviour may result in disqualification.</li>
+            <li>Match results will be verified before prizes are announced.</li>
+            <li>Prize and refund policies will be clearly displayed before registration.</li>
+            <li>All tournaments are subject to applicable laws and game/platform rules.</li>
+        </ul>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section>
+
+    <h2 class="title">ABOUT DEAD-LOX</h2>
+
+    <div class="card">
+
+        <p>
+            DEAD-LOX SCRIMS is a competitive esports platform
+            designed for Free Fire players and teams. Our goal is
+            to provide organised matches, transparent scoring and
+            a competitive environment for players.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section>
+
+    <h2 class="title">CONTACT</h2>
+
+    <div class="card">
+
+        <p>Email: yourmail@example.com</p>
+        <p>WhatsApp: +91 XXXXXXXXXX</p>
+
+        <a href="mailto:yourmail@example.com" class="btn">
+            CONTACT US
+        </a>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    © 2026 DEAD-LOX SCRIMS. All Rights Reserved.
+
+</footer>
+
+
+<script>
+
+function joinScrim(name) {
+
+    alert(
+        "You selected: " + name +
+        "\\n\\nRegistration system will be connected here."
+    );
+
+}
+
+</script>
+
+</body>
+          </html>
